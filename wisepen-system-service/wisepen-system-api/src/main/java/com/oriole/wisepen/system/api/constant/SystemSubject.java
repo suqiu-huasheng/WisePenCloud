@@ -5,11 +5,11 @@ import com.oriole.wisepen.common.core.domain.IBusinessSubject;
 import java.util.Locale;
 
 public enum SystemSubject implements IBusinessSubject {
-    MAIL;
+    MAIL,
+    FEEDBACK;
 
     @Override
     public String key() {
-        return name().toLowerCase(
-                Locale.ROOT);
+        return name().toLowerCase(Locale.ROOT);
     }
 }

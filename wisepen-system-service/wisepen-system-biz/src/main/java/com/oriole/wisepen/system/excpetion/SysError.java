@@ -15,7 +15,10 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum SysError implements IResult {
 
-    MAIL_SEND_FAILED(2111, new ResultKey(BusinessDomain.SYSTEM, SystemSubject.MAIL, ErrorReason.FAILED),"邮件发送失败");
+    MAIL_SEND_FAILED(2111, new ResultKey(BusinessDomain.SYSTEM, SystemSubject.MAIL, ErrorReason.FAILED), "邮件发送失败"),
+
+    FEEDBACK_TYPE_REQUIRED(2211, new ResultKey(BusinessDomain.SYSTEM, SystemSubject.FEEDBACK, ErrorReason.REQUIRED_MISSING), "反馈类型不能为空"),
+    FEEDBACK_NOT_FOUND(2221, new ResultKey(BusinessDomain.SYSTEM, SystemSubject.FEEDBACK, ErrorReason.NOT_FOUND), "反馈记录不存在");
 
     private final Integer code;
     private final ResultKey key;
